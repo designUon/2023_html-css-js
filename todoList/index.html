@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+<body>
+
+    <div id="wrap">
+
+
+        <!-- 시계 -->
+        <h1 id="clock">00:00:00</h1>
+        <!-- 로그인 입력창 => 로그인 후 보이지 않음-->
+        <form id="login_form" action="">
+            <input id="login_id" type="text">
+            <input id="login_button" type="submit" value="Login">
+            <!-- input type=> submit을 지정해주어야 이벤트 설정이 가능함 -->
+        </form>
+
+        <!-- 인사 => 로그인 후에 보임 -->
+        <h1 id="greeting" class="hidden">환영합니다</h1>
+        <!-- <h1 id="greeting" style="display:none;">환영합니다</h1> -->
+        
+        <!-- 할일 입력창  -->
+        <!-- <form id="memo_form" action=""> -->
+        <form id="todo_form" action="" class="hidden">
+            <input type="text" placeholder="할 일을 입력해주세요" required>
+            <!-- required => 빈값도 추가되는 것을 없애줌 -->
+            <input type="submit" value="추가">
+        </form>
+        
+        <!-- 할일 리스트가 입력될 공간 -->
+        <ul id="todolist" class="hidden">
+            <li>
+                <!-- <input type="checkbox" name="" id="">
+                해야할 일 1
+                <button>X</button> -->
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="./js/background.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/todolist.js"></script>
+</body>
+</html>

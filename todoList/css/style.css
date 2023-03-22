@@ -1,0 +1,194 @@
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+}
+
+ul, li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.hidden{
+    display: none;
+}
+
+#wrap{
+    width: 300px;
+    margin: 170px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#clock{
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 10px;
+    /* color: black; */
+    
+    text-shadow: -1px 0 lightsalmon, 0 1px lightsalmon, 1px 0 lightsalmon, 0 -1px lightsalmon;
+    /* text-shadow: 0 0 1px white; */
+    mix-blend-mode: screen;
+    /* -webkit-text-stroke: 0.1px #fff; */
+}
+
+#todolist, #greeting{
+    color: white;
+}
+
+#greeting{
+    font-size: 35px;
+    font-weight: 900;
+    text-align: center;
+    color: lightsalmon;
+    padding: 30px 0;
+    font-family: 'Pretendard-Regular';
+}
+
+#login_id{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px white solid;
+    color: white;
+    margin-top: 30px;
+    width: 240px;
+}
+
+#login_button{
+    border: 1px white solid;
+    color: white;
+    padding: 4px 6px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+#login_button:hover{
+    background-color: lightsalmon;
+    color: black;
+    border: 1px lightsalmon solid;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#login_form input[type="text"]:focus{
+    outline: none
+}
+
+
+
+#todolist li{
+    margin: 10px 0;
+}
+
+#todo_form>input:first-child{
+    width: 250px;
+    height: 20px;
+}
+
+#todo_form input[type="text"]{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px white solid;
+    color: white;
+}
+
+#todo_form input[type="text"]:focus{
+    outline: none
+}
+
+#todo_form input[type="text"]::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+}
+
+
+#todo_form input[type="submit"]{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 4px 7px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#todo_form input[type="submit"]:hover{
+    background-color: lightsalmon;
+    color: black;
+    border: 1px solid lightsalmon;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#todolist input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border: 1px solid lightsalmon;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 8px;
+}
+
+
+#todolist input[type="checkbox"]:checked{
+    background-color: lightsalmon;
+    accent-color: lightsalmon;
+}
+
+#todolist input[type="checkbox"]:checked::after{
+    content : "V";
+    font-size: 13px;
+    margin-left: 2px;
+    position: absolute;
+}
+
+
+#todolist button{
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    font-size: 8px;
+    color: white;
+    padding-bottom: 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    float: right;
+    margin-right: 10px;
+}
+
+#todolist button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#todolist span{
+    position: absolute;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+
+
+
+
+
