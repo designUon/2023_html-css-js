@@ -4,6 +4,14 @@
 // 네비게이션 바 가져오기
 const nav = document.querySelector("#nav");
 
+// 섹션2 .intro_scroll
+const intro = document.querySelector("#intro"); 
+
+// 섹션4 뉴스
+// const news = document.querySelector("#news");
+const newsCards = document.querySelector("#news_cards");
+
+
 // 스크롤 이벤트로 조건을 걸 때 사용할 수 있는 속성
 // 스크롤의 위치 : scrollTop, 
 // 스크롤 길이 : scrollHeight,
@@ -14,6 +22,7 @@ window.addEventListener("scroll", function(){
     // scrollY가 200 이상 스크롤되면 scrollon 클래스를 추가
     if(this.scrollY>=200){
         nav.classList.add("scrollon");
+        intro.classList.add("scrollon");
     }else{
         nav.classList.remove("scrollon");
     }
@@ -25,4 +34,14 @@ window.addEventListener("scroll", function(){
     // console.log("화면바깥길이", window.outerHeight);
     // console.log("화면안쪽길이", window.innerHeight);
     // console.log("스크린Y위치", window.screenY);
+
+    // console.log(this.scrollY);
+
+    if(this.scrollY>1000){
+        newsCards.classList.add("scrollon");
+    }
+
 });
+
+// 섹션 4
+

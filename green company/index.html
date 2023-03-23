@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/slider2.css">
 </head>
 <body>
 
@@ -31,17 +32,31 @@
                 <div class="slider_item"></div>
                 <div class="slider_item"></div>
                 <div class="slider_item"></div>
-                <div class="slider_button" id="prev"><img src="./img/prev.png" alt="버튼"></div>
-                <div class="slider_button" id="next"><img src="./img/next.png" alt="버튼"></div>
+                <div class="slider_button" id="prev"><img src="./img/left-arrow.png" alt="버튼"></div>
+                <div class="slider_button" id="next"><img src="./img/right-arrow.png" alt="버튼"></div>
             </div>
             <!-- <div class="slider_button">&lt;</div>
             <div class="slider_button">&gt;</div> -->
+            <div class="scroll_icon">
+                <a href="#intro">DOWN</a>
+                <div class="down"><img src="./img/down.png" alt="이미지"></div>
+            </div>
+
         </section>
         <!-- 섹션1 배너 끝 -->
 
         <!-- 섹션2 소개(스크롤이벤트) 시작 -->
         <a name="intro"></a>
-        <section class="intro_scroll">
+        <section class="intro_scroll" id="intro">
+            <div class="green_intro">
+                <h1>GREEN COMPANY</h1>
+                <p>그린컴퍼니는 친환경미래소재 분야에서<br> Global Top Tier를 지향합니다.<br><br>
+                    Agile하고 창의적인 조직문화속에서 기술개발에 전념하여<br> 그 성과가 그린그룹의
+                    새로운 50년을 이끌어 갈 수 있도록<br> 최선을 다하겠습니다.</p>
+            </div>
+            <div class="green_intro_image">
+                <div class="intro_image"></div>
+            </div>
 
         </section>
         <!-- 섹션2 소개(스크롤이벤트) 끝 -->
@@ -50,22 +65,123 @@
         <a name="pictures"></a>
         <section class="pictures">
 
+            <div class="picture_wrap">
+
+                <div class="picture_explan">
+                    <h1>Gallery</h1>
+                    <p>세부설명</p>
+                    <div class="picture_buttons" id="slider2_btns">
+                        <a class="on" href="">Gallery 1</a>
+                        <a href="">Gallery 2</a>
+                        <a href="">Gallery 3</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 다른 형태의 슬라이더 작성 -->
+            <div id="slider2" class="slider2">
+                <div class="slider2_item"></div>
+                <div class="slider2_item"></div>
+                <div class="slider2_item"></div>
+                <!-- 모양 확인용 -->
+                <!-- <div class="slider2_dots">
+                    <div class="dot on"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div> -->
+            </div>
+
         </section>
         <!-- 섹션3 사진(슬라이더 버튼) 끝 -->
 
         <!-- 섹션4 뉴스(스크롤이벤트) 시작 -->
         <a name="news"></a>
-        <section class="news_scroll">
-            
+        <section class="news_scroll" id="news">
+
+            <h1>STORY</h1>
+
+            <div class="news_cards" id="news_cards">
+                
+
+                <div class="card">
+                    
+                    <div class="card_img_wrap">
+                        <div class="card_img"></div>
+                    </div>
+
+                    <div class="card_text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                
+                </div>
+
+
+                <div class="card">
+                    
+                    <div class="card_img_wrap">
+                        <div class="card_img"></div>
+                    </div>
+
+                    <div class="card_text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                
+                </div>
+
+
+                <div class="card">
+                    
+                    <div class="card_img_wrap">
+                        <div class="card_img"></div>
+                    </div>
+
+                    <div class="card_text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                
+                </div>
+
+
+                <div class="card">
+                    
+                    <div class="card_img_wrap">
+                        <div class="card_img"></div>
+                    </div>
+
+                    <div class="card_text">
+                        <p>보도자료</p>
+                        <h3>보도자료 제목</h3>
+                        <span>날짜</span>
+                    </div>
+                
+                </div>
+
+
+            </div>
+
         </section>
         <!-- 섹션4 뉴스(스크롤이벤트) 끝 -->
     </main>
 
     <!-- 푸터 시작 -->
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="footer_text">
+            <div class="logo">GR COMPANY</div>
+            <div class="address">주소</div>
+            <div class="tel">전화번호</div>
+        </div>
+    </footer>
     <!-- 푸터 끝 -->
 
     <script src="./js/scroll.js"></script>
     <script src="./js/silder.js"></script>
+    <script src="./js/silder2.js"></script>
 </body>
 </html>

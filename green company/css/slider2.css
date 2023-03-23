@@ -1,7 +1,7 @@
 /* slider 디자인 */
 
 /* slider item */
-.slider{
+.slider2{
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -9,7 +9,7 @@
     /* float: left; */
 }
 
-.slider_item{
+.slider2_item{
     width: 100%;
     height: 100vh;
     background-color: lightgoldenrodyellow;
@@ -29,18 +29,11 @@
 }
 
 /* slider_button 디자인 */
-.slider_button{
+/* .slider2_button{
     position: absolute;
     top: 50vh;
     font-size: 30px;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
-    /* box-shadow: 0 0 10px black; */
-}
-
-.slider_button img{
-    width: 100%;
 }
 
 #prev{
@@ -49,21 +42,50 @@
 
 #next{
     right: 30px;
-}
+} */
 
 
 /* 슬라이더 이미지 */
-.slider>.slider_item:nth-child(1){
+.slider2>.slider2_item:nth-child(1){
     /* background-color: lightsteelblue; */
     background-image: url(../img/0.jpg);
 }
 
-.slider>.slider_item:nth-child(2){
+.slider2>.slider2_item:nth-child(2){
     background-image: url(../img/1.jpg);
 }
 
-.slider>.slider_item:nth-child(3){
+.slider2>.slider2_item:nth-child(3){
     background-image: url(../img/2.jpg);
+}
+
+
+/* 슬라이더 dot의 모양 */
+
+.slider2{
+    position: relative;
+}
+
+.slider2_dots{
+    position: absolute;
+    display: flex;
+    left: 45%; bottom: 0;
+}
+
+.slider2_dots .dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    border: 1px solid darkslateblue;
+    /* background-color: slateblue; */
+    cursor: pointer;
+}
+
+.slider2_dots .dot:hover, 
+.slider2_dots .dot.on{
+    background-color: darkslateblue;
+    border: 1px solid darkslateblue;
 }
 
 
