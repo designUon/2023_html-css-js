@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slide_wrap{
+            width: 500px;
+            height: 300px;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: nowrap;
+            /* float: left; */
+            position: relative;
+            overflow: hidden;
+        }
+        .slideBox{
+            width: 100%;
+            height: inherit;
+            flex-shrink: 0;
+            left: 0;
+            position: relative;
+            transition: all 1s;
+            text-align: center;
+            font-size: 80px;
+            line-height: 290px;
+        }
+        .slideBox:nth-child(1){
+            background-color: lightblue;
+        }
+        .slideBox:nth-child(2){
+            background-color: lightseagreen;
+        }
+        .slideBox:nth-child(3){
+            background-color: lightsalmon;
+        }
+
+        .button{
+            position: absolute;
+            top: 50%;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .button:hover{
+            font-weight: 900;
+        }
+
+        .nextBtn{
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="slide_wrap">
+        <div class="slideBox">1</div>
+        <div class="slideBox">2</div>
+        <div class="slideBox">3</div>
+        <div class="button prevBtn">PREV</div>
+        <div class="button nextBtn">NEXT</div>
+    </div>
+
+    
+    <script>
+
+        const slideWrap = document.querySelector("#slide_wrap");
+        const slideBoxs = document.querySelectorAll(".slideBox"); 
+        const nextBtn = document.querySelector(".nextBtn");
+        const prevBtn = document.querySelector(".prevBtn");
+
+        const maxSlide = slideBoxs.length;
+
+        let currSlide = 1;
+
+        nextBtn.addEventListener("click",function(){
+        // 현재 슬라이더가 전체갯수보다 작을때 실행
+        if(currSlide<maxSlide) {
+            currSlide++;  // 2> -100%, 3>-200%, 4>-300% >> 화면의넓이 곱해서이동
+            //sliderItems를 통해서 모든 left값 이동
+            for ( let i = 0; i<slideBoxs.length; i++ ) {
+                slideBoxs[i].style.left = `${100+(-100)*currSlide}%`
+                }
+            }
+        })
+
+
+        prevBtn.addEventListener("click",function(){
+        // 현재 슬라이더가 전체갯수보다 작을때 실행
+        if(currSlide>1) {
+            currSlide--;  // 2> -100%, 3>-200%, 4>-300% >> 화면의넓이 곱해서이동
+            //sliderItems를 통해서 모든 left값 이동
+            for ( let i = 0; i<slideBoxs.length; i++ ) {
+                slideBoxs[i].style.left = `${100+(-100)*currSlide}%`
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
